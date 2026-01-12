@@ -58,3 +58,12 @@ jobs:
     # 9. Site
     - name: Maven Site
       run: mvn site
+      
+    #jar file
+    - name: Upload JAR Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: java-calc-jar
+        path: target/*.jar
+
+    
